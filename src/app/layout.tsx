@@ -5,7 +5,10 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 export const metadata: Metadata = {
-  title: 'devstore',
+  title: {
+    template: '%s | devstore',
+    default: '',
+  },
 }
 
 export default function RootLayout({
@@ -15,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html className={inter.variable} lang="en">
-      <body>{children}</body>
+      <body className="bg-zinc-950 text-zinc-50 antialiased">{children}</body>
     </html>
   )
 }
