@@ -30,7 +30,7 @@ export default async function InterceptProductPage({
           </div>
         </div>
 
-        <div className="max-w-[340px] mt-5 mb-10 mr-5 z-50">
+        <div className="max-w-[340px] mt-5 mb-10 mr-5 z-30">
           <ProductInfo product={product} />
         </div>
       </div>
