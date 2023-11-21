@@ -46,11 +46,7 @@ jobs:
 
       - name: Verify Cypress
         run: |
-          pnpm i
-          pnpm cypress cache path
-          pnpm cypress cache list
-          pnpm cypress verify
-          pnpm cypress info
+          pnpm cypress install
 
       - name: Cypress run
         uses: cypress-io/github-action@v6
