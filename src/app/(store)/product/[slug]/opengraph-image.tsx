@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
-import { api } from '@/data/api'
-import { Product } from '@/data/types/product'
 import { env } from '@/env'
+import { getProduct } from '@/services/api/getProduct'
 import { ImageResponse } from 'next/og'
 import colors from 'tailwindcss/colors'
 
@@ -15,19 +14,6 @@ export const size = {
 }
 
 export const contentType = 'image/png'
-
-async function getProduct(slug: string): Promise<Product> {
-  const response = await api(`products/${slug}`, {
-    next: {
-      revalidate: 60 * 60,
-      tags: [`GET:products/${slug}`],
-    },
-  })
-
-  const products = await response.json()
-
-  return products
-}
 
 // Image generation
 export default async function OgImage({

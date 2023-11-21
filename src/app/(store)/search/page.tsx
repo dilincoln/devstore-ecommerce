@@ -1,24 +1,10 @@
-import { api } from '@/data/api'
-import { Product } from '@/data/types/product'
+import { searchProducts } from '@/services/api/searchProducts'
 import Image from 'next/image'
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
 
 interface SearchProps {
   searchParams: { q: string }
-}
-
-async function searchProducts(query: string): Promise<Product[]> {
-  const response = await api(`products/search?q=${query}`, {
-    next: {
-      revalidate: 60,
-      tags: [`GET:products/search?q=${query}`],
-    },
-  })
-
-  const products = await response.json()
-
-  return products
 }
 
 export default async function Search({ searchParams }: SearchProps) {
