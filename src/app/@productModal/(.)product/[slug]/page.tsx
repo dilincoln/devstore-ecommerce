@@ -16,11 +16,11 @@ export default async function InterceptProductPage({
 
   return (
     <Modal>
-      <div className="flex overflow-hidden group hover:overflow-visible">
-        <div className="relative w-96">
+      <div className="flex">
+        <div className="relative w-96 overflow-hidden hover:overflow-visible">
           <div className="absolute bottom-0">
             <Image
-              className="max-w-none transform group-hover:scale-110 transition translate-x-[-35%] translate-y-[28%]"
+              className="max-w-none transform hover:scale-110 transition translate-x-[-35%] translate-y-[28%]"
               src={product.image}
               width={700}
               height={700}
@@ -30,7 +30,7 @@ export default async function InterceptProductPage({
           </div>
         </div>
 
-        <div className="max-w-[340px] mt-5 mb-10 mr-5">
+        <div className="max-w-[340px] mt-5 mb-10 mr-5 z-50">
           <ProductInfo product={product} />
         </div>
       </div>
