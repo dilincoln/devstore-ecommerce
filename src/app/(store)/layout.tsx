@@ -1,4 +1,10 @@
 import { Header } from '@/components/header'
+import { env } from '@/env'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  metadataBase: new URL(env.NEXT_PUBLIC_API_BASE_URL),
+}
 
 export default function StoreLayout({
   children,
