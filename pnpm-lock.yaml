@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@t3-oss/env-nextjs':
+    specifier: ^0.7.1
+    version: registry.npmjs.org/@t3-oss/env-nextjs@0.7.1(typescript@5.0.2)(zod@3.22.4)
   lucide-react:
     specifier: ^0.292.0
     version: registry.npmjs.org/lucide-react@0.292.0(react@18.0.0)
@@ -423,6 +426,39 @@ packages:
     version: 0.5.2
     dependencies:
       tslib: registry.npmjs.org/tslib@2.6.2
+    dev: false
+
+  registry.npmjs.org/@t3-oss/env-core@0.7.1(typescript@5.0.2)(zod@3.22.4):
+    resolution: {integrity: sha512-3+SQt39OlmSaRLqYVFv8uRm1BpFepM5TIiMytRqO9cjH+wB77o6BIJdeyM5h5U4qLBMEzOJWCY4MBaU/rLwbYw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@t3-oss/env-core/-/env-core-0.7.1.tgz}
+    id: registry.npmjs.org/@t3-oss/env-core/0.7.1
+    name: '@t3-oss/env-core'
+    version: 0.7.1
+    peerDependencies:
+      typescript: '>=4.7.2'
+      zod: ^3.0.0
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+    dependencies:
+      typescript: registry.npmjs.org/typescript@5.0.2
+      zod: registry.npmjs.org/zod@3.22.4
+    dev: false
+
+  registry.npmjs.org/@t3-oss/env-nextjs@0.7.1(typescript@5.0.2)(zod@3.22.4):
+    resolution: {integrity: sha512-tQDbNLGCOvKGi+JoGuJ/CJInJI7/kLWJqtgGppAKS7ZFLdVOqZYR/uRjxlXOWPnxmUKF8VswOAsq7fXUpNZDhA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@t3-oss/env-nextjs/-/env-nextjs-0.7.1.tgz}
+    id: registry.npmjs.org/@t3-oss/env-nextjs/0.7.1
+    name: '@t3-oss/env-nextjs'
+    version: 0.7.1
+    peerDependencies:
+      typescript: '>=4.7.2'
+      zod: ^3.0.0
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+    dependencies:
+      '@t3-oss/env-core': registry.npmjs.org/@t3-oss/env-core@0.7.1(typescript@5.0.2)(zod@3.22.4)
+      typescript: registry.npmjs.org/typescript@5.0.2
+      zod: registry.npmjs.org/zod@3.22.4
     dev: false
 
   registry.npmjs.org/@types/json-schema@7.0.15:
@@ -4950,7 +4986,6 @@ packages:
     version: 5.0.2
     engines: {node: '>=12.20'}
     hasBin: true
-    dev: true
 
   registry.npmjs.org/unbox-primitive@1.0.2:
     resolution: {integrity: sha512-61pPlCD9h51VoreyJ0BReideM3MDKMKnh6+V9L08331ipq6Q8OFXZYiqP6n/tbHx4s5I9uRhcye6BrbkizkBDw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/unbox-primitive/-/unbox-primitive-1.0.2.tgz}
