@@ -17,7 +17,7 @@ export default async function InterceptProductPage({
   return (
     <Modal>
       <div className="flex">
-        <div className="relative w-96 overflow-hidden hover:overflow-visible">
+        <div className="relative w-96 overflow-visible">
           <div className="absolute bottom-0">
             <Image
               className="max-w-none transform hover:scale-110 transition duration-500 translate-x-[-35%] translate-y-[28%]"
