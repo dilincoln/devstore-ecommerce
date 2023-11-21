@@ -20,7 +20,7 @@ export default async function InterceptProductPage({
         <div className="relative w-96 overflow-hidden hover:overflow-visible">
           <div className="absolute bottom-0">
             <Image
-              className="max-w-none transform hover:scale-110 transition translate-x-[-35%] translate-y-[28%]"
+              className="max-w-none transform hover:scale-110 transition duration-500 translate-x-[-35%] translate-y-[28%]"
               src={product.image}
               width={700}
               height={700}
