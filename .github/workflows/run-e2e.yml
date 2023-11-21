@@ -36,6 +36,21 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Cache Cypress binary
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/Cypress
+          key: ${{ runner.os }}-cypress-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-cypress-${{ hashFiles('**/package-lock.json') }}
+
+      - name: Verify Cypress
+        run: |
+          npx cypress cache path
+          npx cypress cache list
+          npx cypress verify
+          npx cypress info
+
       - name: Cypress run
         uses: cypress-io/github-action@v6
         env:
